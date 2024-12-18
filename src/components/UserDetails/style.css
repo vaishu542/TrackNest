@@ -1,0 +1,17 @@
+.photo{
+    height: 120px;
+    width: 120px;
+    background: #d65555;
+    border-radius: 50%;
+}
+.details{
+    font-size: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.details p{
+    font-size: 1.2rem;
+    color: rgb(59, 59, 59);
+}

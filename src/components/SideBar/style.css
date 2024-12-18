@@ -1,0 +1,69 @@
+.main-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-bar {
+    width: 25%;
+    box-shadow: var(--shadow);
+    border-radius: 7px;
+    padding: 20px;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.side-context{
+    margin-top: 30px;
+}
+.side-context ul {
+    width: 113%;
+    padding: 0;
+    margin: 0;
+}
+
+.side-context li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    width: 100%;
+}
+li span {
+    font-size: 1.2rem;
+}
+#icon {
+    font-size: 1.5rem;
+    margin-right: 10px; 
+}
+
+.side-context li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a{
+    color: rgb(61, 60, 60);
+}
+.side-context li a:hover {
+    background-color: #86b9e2;
+    color: white;
+}
+
+.main-details{
+    width: 100%;
+}
+
+/* Active state for NavLink */
+.active {
+    background-color: var(--theme-hover);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}

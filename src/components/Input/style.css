@@ -1,0 +1,21 @@
+.input-box{
+    text-align: left;
+    margin: 20px 30px;
+}
+
+.lable-input{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 450;
+    margin: 6px 0px;
+}
+.input-details{
+    border: 0px;
+    border-bottom: 1px solid black;
+    font-size: .9rem;
+    width: 100%;
+    color: rgb(26, 24, 24);
+    &&:focus{
+        outline: none;
+    }
+}

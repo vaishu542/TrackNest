@@ -1,0 +1,36 @@
+.btn-blue{
+    background-color: var(--theme);
+    color: white;
+    padding: 5px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 85%;
+    border-radius: 5px;
+    font-size: 1rem;
+    &&:hover{
+        background-color: var(--theme-hover);
+        scale: 1.01;
+    }
+    &&:active{
+        background-color: var(--theme);
+    }
+}
+.btn{
+    background-color: transparent;
+    border: 1px solid var(--theme);
+    color: var(--theme);
+    padding: 5px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 85%;
+    border-radius: 5px;
+    font-size: 1rem;
+    &&:hover{
+        background-color: var(--theme-hover);
+        color: var(--white);
+    }
+    &&:active{
+        background-color: var(--theme);
+    }
+}

@@ -1,0 +1,43 @@
+
+.wrapper{
+    height: 93vh;
+}
+.sign-box{
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 450px;
+    text-align: center;
+}
+.sign-head{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+/* for or */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: gray;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgb(190, 189, 189);
+    margin: 0 15px;
+  }
+.log{
+    font-size: .83rem;
+    color: rgb(44, 44, 44);
+}
+.log a{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+  

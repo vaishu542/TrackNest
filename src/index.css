@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Vithkuqi:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --theme: #6a97bd;
+  --theme-hover: #5894c5;
+  --white: #fff;
+  --black:#000;
+  --shadow :rgba(54, 10, 10, 0.24) 0px 3px 8px;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans Vithkuqi", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input{
+  font-family: "Noto Sans Vithkuqi", sans-serif;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
