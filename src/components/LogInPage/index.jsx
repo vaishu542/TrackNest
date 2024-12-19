@@ -5,7 +5,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Button from '../Button';
 import { toast } from 'react-toastify';
 import { auth } from '../../firebase';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { db } from '../../firebase';
 import { doc, setDoc, getDoc } from "firebase/firestore";
