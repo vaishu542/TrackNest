@@ -29,7 +29,7 @@ const index = () => {
                     console.log(password);
                     toast.success("User logedin successfully");
                     console.log("User logedin successfully");
-                    
+
                     setPassword("");
                     setEmail("");
                     setLoading(false);
@@ -69,9 +69,9 @@ const index = () => {
                         createdAt: new Date(),
                     });
                 // toast.success("Doc created!");
-                console.log("Doc created!"); 
-                
-                
+                console.log("Doc created!");
+
+
             } catch (e) {
                 toast.error(e.message);
                 console.log(e.message);
@@ -139,8 +139,7 @@ const index = () => {
                     <div className="divider">Or</div>
                     <Button btnName={loading ? "Loading.." : "Log In with Google"} onclick={googleSignUp} isBlue={true} />
                     <div className='log'>
-                        Or Don't have an account ?
-                        <span><a href='/signup'> Click here</a></span>
+                        Or Don't have an account ? <span><Link to='/signup'>Click here</Link></span>
                     </div>
                 </form>
             </div>

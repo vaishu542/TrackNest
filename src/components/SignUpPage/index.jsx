@@ -5,7 +5,7 @@ import Button from '../Button';
 import { toast } from 'react-toastify';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, db } from '../../firebase';
 import { useUser } from '../Context/UserContext';
 
@@ -20,10 +20,10 @@ const SignUp = () => {
 
     async function createDoc(user) {
         if (!user) return;
-    
+
         const userRef = doc(db, "users", user.uid);
         const userData = await getDoc(userRef);
-    
+
         if (!userData.exists()) {
             try {
                 const userPayload = {
@@ -32,8 +32,8 @@ const SignUp = () => {
                     photoURL: user.photoURL || "",
                     createdAt: new Date(),
                 };
-                
-                setUserDetails(userPayload); 
+
+                setUserDetails(userPayload);
                 await setDoc(userRef, userPayload);
                 toast.success("Profile created successfully!");
             } catch (e) {
@@ -44,26 +44,26 @@ const SignUp = () => {
             console.log("User already exists.");
         }
     }
-    
+
     const handleSignUpWithEmail = async (event) => {
         event.preventDefault();
-    
+
         if (!name || !email || !password || !conformPassword) {
             toast.error("All fields are required!");
             return;
         }
-    
+
         if (password !== conformPassword) {
             toast.error("Passwords do not match!");
             return;
         }
-    
+
         setLoading(true);
-    
+
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-    
+
             await createDoc(user);
             toast.success("Sign-up successful!");
             navigate('/mainPage');
@@ -74,17 +74,17 @@ const SignUp = () => {
             setLoading(false);
         }
     };
-    
+
     const handleGoogleSignUp = async (event) => {
         event.preventDefault();
-    
+
         setLoading(true);
-    
+
         try {
             const provider = new GoogleAuthProvider();
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
-    
+
             console.log("Google Sign-In Successful:");
             const userD = {
                 name: user.displayName || name,
@@ -92,7 +92,7 @@ const SignUp = () => {
                 photoURL: user.photoURL || "",
             };
             setUserDetails(userD);
-    
+
             await createDoc(user);
             toast.success("Sign-up successful!");
             navigate('/mainPage');
@@ -104,7 +104,7 @@ const SignUp = () => {
         }
     };
 
-    
+
     return (
         <div className='wrapper'>
             <div className='sign-box'>
@@ -152,7 +152,7 @@ const SignUp = () => {
                         disabled={loading}
                     />
                     <div className='log'>
-                        Already have an account? <span><a href='/login'>Click here</a></span>
+                        Already have an account? <span><Link to='/login'>Click here</Link></span>
                     </div>
                 </form>
             </div>
