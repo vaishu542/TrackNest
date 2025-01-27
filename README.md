@@ -7,7 +7,7 @@ TrackNest is your personal finance tracker, designed to help you keep an eye on 
 ## Demo 🎥
 
 Check out the live demo of TrackNest and start tracking your finances today!  
-[TrackNest Demo](https://tracknest-04.netlify.app)
+[TrackNest Demo](https://tracknest-s04.netlify.app/)
 
 
 ## Tech Stack 💻
